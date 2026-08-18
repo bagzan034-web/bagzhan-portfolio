@@ -6,39 +6,46 @@
   <title>Багжан — веб-разработчик</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       font-family: Arial, sans-serif;
       color: white;
       background: linear-gradient(135deg, #111827, #312e81);
     }
 
-    .card {
-      width: 85%;
-      max-width: 500px;
-      padding: 35px 25px;
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 25px;
       text-align: center;
+    }
+
+    .box {
+      width: 100%;
+      max-width: 600px;
+      padding: 40px 25px;
       background: rgba(255, 255, 255, 0.1);
       border-radius: 25px;
     }
 
     h1 {
       font-size: 38px;
-      margin-bottom: 10px;
     }
 
     p {
       font-size: 18px;
       line-height: 1.6;
       color: #ddddff;
-    }
-
-    .skills {
-      margin: 25px 0;
     }
 
     .skills span {
@@ -49,35 +56,92 @@
       border-radius: 20px;
     }
 
-    button {
-      padding: 14px 25px;
-      border: none;
-      border-radius: 15px;
-      font-size: 16px;
+    .button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 15px 25px;
       color: white;
+      text-decoration: none;
       background: #ec4899;
+      border-radius: 15px;
+    }
+
+    .projects {
+      padding: 60px 25px;
+      text-align: center;
+      background: #111827;
+    }
+
+    .project-list {
+      max-width: 900px;
+      margin: 30px auto;
+      display: grid;
+      gap: 20px;
+    }
+
+    .project {
+      padding: 25px;
+      text-align: left;
+      background: #1f2937;
+      border-radius: 20px;
+    }
+
+    .project h3 {
+      color: #c4b5fd;
+    }
+
+    footer {
+      padding: 25px;
+      text-align: center;
+      background: #0b1120;
+      color: #aaaaaa;
     }
   </style>
 </head>
 
 <body>
-  <div class="card">
-    <h1>Привет, я Багжан 👋</h1>
+  <section class="hero">
+    <div class="box">
+      <h1>Привет, я Багжан 👋</h1>
 
-    <p>
-      Я начинающий веб-разработчик. Создаю современные сайты,
-      онлайн-меню и небольшие игры.
-    </p>
+      <p>
+        Я начинающий веб-разработчик. Создаю современные сайты,
+        онлайн-меню и небольшие игры.
+      </p>
 
-    <div class="skills">
-      <span>Сайты</span>
-      <span>Анимации</span>
-      <span>Мини-игры</span>
+      <div class="skills">
+        <span>Сайты</span>
+        <span>Анимации</span>
+        <span>Мини-игры</span>
+      </div>
+
+      <a class="button" href="#projects">Мои работы</a>
     </div>
+  </section>
 
-    <button onclick="alert('Скоро здесь появятся мои проекты!')">
-      Мои работы
-    </button>
-  </div>
+  <section class="projects" id="projects">
+    <h2>Мои проекты</h2>
+
+    <div class="project-list">
+      <div class="project">
+        <h3>🍣 Sushi Box</h3>
+        <p>Онлайн-меню для кафе с категориями блюд и QR-кодом.</p>
+      </div>
+
+      <div class="project">
+        <h3>🌐 Сайт-визитка</h3>
+        <p>Современный рекламный сайт для небольшого бизнеса.</p>
+      </div>
+
+      <div class="project">
+        <h3>🎮 Мини-игра</h3>
+        <p>Небольшая игра, которая работает прямо в браузере.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Багжан · Начинающий веб-разработчик
+  </footer>
 </body>
 </html>
